@@ -10,16 +10,17 @@ function Book(title,author,pages,isRead){
 
 
 }
+//add books function
 function addBookToLibrary(title,author,pages,isread){
 
 const newBook=new Book(title,author,pages,isread);
 mylibrary.push(newBook);
     
 }
-
+//display books
 function displayBooks(){
     const container = document.getElementById("library"); 
-    container.innerHtml="";
+    container.innerHTML="";
     for(let i=0;i<mylibrary.length;i++){
         const book=mylibrary[i];
     
@@ -33,7 +34,29 @@ function displayBooks(){
     }
 }
 
-addBookToLibrary("Atomic Habits", "James Clear", 320, true);
-addBookToLibrary("Deep Work", "Cal Newport", 304, false);
+//add books via form
+const btn=document.getElementById("addnewbook");
+const form=document.getElementById("bookForm")
+btn.addEventListener("click",()=>{
+    form.style.display = "block";
+   
+});
 
-displayBooks();
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const title=document.getElementById("title").value;
+    const author = document.getElementById("author").value;
+    const pages = document.getElementById("pages").value;
+    const isRead = document.getElementById("isRead").checked;
+    addBookToLibrary(title,author,pages,isRead);
+    displayBooks();
+    form.reset();
+    form.style.display="none";
+})
+
+
+
+// addBookToLibrary("Atomic Habits", "James Clear", 320, true);
+// addBookToLibrary("Deep Work", "Cal Newport", 304, false);
+
+// displayBooks();
