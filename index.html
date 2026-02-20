@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Noctis Archive</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ 
+
+<div class="library-bg">
+  <div id="library" class="shelf"></div>
+</div>
     <div id="library"></div>
     
       <button id="addnewbook">Add new Book</button>
+     
       <form id="bookForm" style="display: none;">
 
         <input id="title" type="text" placeholder="Book Name" required>
         <input id="author" type="text" placeholder="Author Name" required>
         <input id="pages" type="number" placeholder="page Number" >
         <input id="isRead" type="checkbox" placeholder="isRead">
+        <input id="note" type="text" placeholder="Write a note about this book...">
         <button type="submit">Submit</button>
       </form>
 

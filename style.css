@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #111;
+}
+
+/* Background image */
+.library-bg {
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+    url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") 
+    no-repeat center center/cover;
+  padding: 80px 40px;
+}
+
+/* Shelf layout */
+.shelf {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Book look */
+.book-card {
+  width: 120px;
+  height: 200px;
+  background: linear-gradient(145deg, #5a3e2b, #3e2a1f);
+  border-radius: 4px;
+  box-shadow: 
+    inset -5px 0 10px rgba(0,0,0,0.5),
+    5px 10px 20px rgba(0,0,0,0.6);
+  padding: 10px;
+  color: #f5e6d3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+}
+
+.book-card h3 {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.book-card p {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+button {
+  background: #c2a878;
+  border: none;
+  padding: 4px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e0c89c;
+}
+
+.book-card small {
+  display: block;
+  margin-top: 10px;
+  opacity: 0.7;
+  font-style: italic;
+}
